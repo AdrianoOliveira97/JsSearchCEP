@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <h1>Procure seu endereço usando seu CEP</h1>
+
+  <input type="text" id="cep" placeholder="CEP">
+  <button class = "button" className="button" type="submit">
+    Pesquisar
+  </button>
+  <p></p>
+  <div class="container">
+    <table id="addressTable" style="display: none;" style="width:100%">
+      <tr>
+        <th>Rua</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>Estado</th>
+      </tr>
+      <tr>
+        <td id="street"></td></td>
+        <td id="district"></td></td>
+        <td id="city"></td></td>
+        <th id="uf"></th></th>
+      </tr>
+    </table>
+  </div>
+  
+ <div id="checkButtons" style="display: none;">
+  <h1> Deseja calcular o frete ?</h1>
+  <button class="button" value="Sim" onclick="quest(value)">Sim</button>
+  <button class = "button" value="Não" onclick="quest(value)">Não</button>
+  </div>
+
+  <script src="./js/searchCEP.js"></script>
+  <div id="deliveryValues" style="display: none;">
+    <div>
+      <input type="text" id="sCepOrigem" placeholder="Cep origem">
+      <input type="text" id="sCepDestino" placeholder="Cep destino">
+      <input type="text" id="nVlPeso" placeholder="Peso">
+      <input type="text" id="nVlComprimento" placeholder="Comprimento">
+      <input type="text" id="nVlLargura" placeholder="Largura">
+      <input type="text" id="nVlAltura" placeholder="Altura">
+      <input type="text" id="nVlValorDeclarado" placeholder="Valor declarado">
+  </div>
+  <div id="deliveryT">
+      <select id="nCdServico" placeholder="Tipo de entrega">
+          <option value="40010">SEDEX</option>
+          <option value="41106">PAC sem contrato</option>
+          <option value="41211">PAC com contrato</option>
+        </select>
+  </div>
+  <button class="button" onclick="abc()">Calcular</button>
+  </div>
+  <div id="response">
+    <div id="ValorSemAdicionais"></div>
+    <div id="PrazoEntrega"></div>
+  </div>
+  
+  
+  
+</body>
+
+</html>
+
+
+
